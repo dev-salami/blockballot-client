@@ -52,11 +52,13 @@ function Navbar() {
   return (
     <div>
       <div className="container text-xs sm:text-base mx-auto px-4 py-3 mt-4 bg-white/10 flex justify-between rounded-xl ">
-        <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-md">
-          LOGO
+        <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-md  text-sm font-semibold">
+          BLOCK BALLOT
         </div>
         <div className="hidden sm:flex justify-between w-full  items-center">
-          <div className="bg-gray-900 px-4 py-1 rounded-full">0x-DEVS</div>
+          <div className="bg-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
+            BLOCK BALLOT
+          </div>
 
           <Link href="/" className="bg-black px-4 py-1 rounded-full">
             Home
