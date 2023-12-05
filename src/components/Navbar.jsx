@@ -122,6 +122,7 @@ function Navbar() {
                   <MobileLink href={link.href} title={link.title} />
                 </div>
               ))}
+              <ConnectWallet className="!text-xs !w-fit" />
               {/* <motion.div
                 variants={linkVars}
                 initial="initial"
