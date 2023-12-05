@@ -2,6 +2,7 @@
   "name": "poll",
   "version": "0.1.0",
   "private": true,
+   "proxy": "https://sepolia.rpc.thirdweb.com/d04aaf517e5abf172051f32dad498cc6",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -27,6 +28,6 @@
     "eslint-config-next": "14.0.2",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
-  },
-  "proxy": "https://sepolia.rpc.thirdweb.com/d04aaf517e5abf172051f32dad498cc6"
+  }
+ 
 }
