@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import WhiteList from "@/components/WhiteListInput";
 import { uuid } from "uuidv4";
-import { nanoid } from "nanoid";
 
 function Page() {
   const [question, setQuestion] = useState("");
