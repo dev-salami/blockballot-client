@@ -20,7 +20,7 @@ function ManagePolls() {
               onChange={(e) => setPoll_ID(e.target.value)}
               value={poll_ID}
               className="border border-black rounded-md py-1 px-2 text-gray-900"
-              type="number"
+              type="text"
               placeholder="Enter Poll ID"
             />
           </div>
