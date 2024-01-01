@@ -4,6 +4,8 @@ import OptionInput from "@/components/OptionInput";
 import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import WhiteList from "@/components/WhiteListInput";
+import { uuid } from "uuidv4";
+import { nanoid } from "nanoid";
 
 function Page() {
   const [question, setQuestion] = useState("");
@@ -11,7 +13,7 @@ function Page() {
   const [option, setOption] = useState([""]);
   const [public__access, setPublic__access] = useState(null);
   const [whiteList, setWhiteList] = useState([""]);
-  const args = [public__access, whiteList, question, option];
+  const args = [uuid(), public__access, whiteList, question, option];
 
   function hasEmptyString(arr) {
     // Check if any element in the array is an empty string
