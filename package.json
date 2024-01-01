@@ -2,7 +2,7 @@
   "name": "poll",
   "version": "0.1.0",
   "private": true,
-   "proxy": "https://sepolia.rpc.thirdweb.com/d04aaf517e5abf172051f32dad498cc6",
+  "proxy": "https://sepolia.rpc.thirdweb.com/d04aaf517e5abf172051f32dad498cc6",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,6 +20,7 @@
     "react-icons": "^4.12.0",
     "react-slick": "^0.29.0",
     "swiper": "^11.0.4",
+    "uuidv4": "^6.2.13",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
@@ -29,5 +30,4 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
   }
- 
 }
