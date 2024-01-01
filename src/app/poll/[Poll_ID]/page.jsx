@@ -5,9 +5,8 @@ import { useContract, useContractRead } from "@thirdweb-dev/react";
 
 export default function Page({ params }) {
   const { contract } = useContract(
-    "0x8245F0413dC75aAe23FE36fb2a328AD228F09296"
+    "0x4E68c1b239a351527024C89CD5C0822885A0620B"
   );
-
   const {
     data: poll,
     isLoading,
@@ -33,7 +32,7 @@ export default function Page({ params }) {
               <main>
                 <div>
                   <span>ID</span> <span> : </span>
-                  <span> {poll[2].toNumber()}</span>
+                  <span> {poll[6]}</span>
                 </div>
                 <div>
                   <span>PUBLIC ACCESS</span>
@@ -51,19 +50,19 @@ export default function Page({ params }) {
                   <span>CREATOR</span>
                   <span> : </span>
 
-                  <span>{poll?.[4].toString()}</span>
+                  <span>{poll?.[2].toString()}</span>
                 </div>
                 <div>
                   <span>QUESTION</span>
                   <span> : </span>
 
-                  <span>{poll?.[5]}</span>
+                  <span>{poll?.[3]}</span>
                 </div>
 
                 <div>
-                  {poll[6].map((option, index) => (
+                  {poll[4].map((option, index) => (
                     <div key={index}>
-                      {option} {poll[7][index].toNumber()}
+                      {option} {poll[5][index].toNumber()}
                     </div>
                   ))}
                 </div>

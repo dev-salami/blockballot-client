@@ -18,7 +18,7 @@ import Image from "next/image";
 function Polls() {
   const address = useAddress();
   const { contract } = useContract(
-    "0x8245F0413dC75aAe23FE36fb2a328AD228F09296"
+    "0x4E68c1b239a351527024C89CD5C0822885A0620B"
   );
   const { data, isLoading: loadingUserPoll } = useContractRead(
     contract,
@@ -83,10 +83,10 @@ function Polls() {
                     key={index}
                     className="border p-2  rounded-md flex justify-between"
                   >
-                    <span>{`ID : ${poll.toNumber()}`}</span>
-                    <Link href={`poll/${poll.toNumber()}`}>View Poll</Link>
-                    <DeletePollButton Poll_ID={poll.toNumber()} />
-                    <EndPollButton Poll_ID={poll.toNumber()} />
+                    <span>{`ID : ${poll}`}</span>
+                    <Link href={`poll/${poll}`}>View Poll</Link>
+                    <DeletePollButton Poll_ID={poll} index={index} />
+                    <EndPollButton Poll_ID={poll} />
                   </motion.div>
                 ))}
               </div>
