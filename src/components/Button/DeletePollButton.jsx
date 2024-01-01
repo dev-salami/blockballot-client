@@ -5,11 +5,11 @@ import Loader from "../LoaderSm";
 import { MdDelete } from "react-icons/md";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
-function DeletePollButton({ Poll_ID }) {
+function DeletePollButton({ Poll_ID, index }) {
   const [success, setSuccess] = useState(false);
 
   const { contract } = useContract(
-    "0x8245F0413dC75aAe23FE36fb2a328AD228F09296"
+    "0x4E68c1b239a351527024C89CD5C0822885A0620B"
   );
   const { mutateAsync: deletePoll, isLoading } = useContractWrite(
     contract,
@@ -18,7 +18,7 @@ function DeletePollButton({ Poll_ID }) {
 
   const _deletePoll = async () => {
     try {
-      const data = await deletePoll({ args: [Poll_ID] });
+      const data = await deletePoll({ args: [Poll_ID, index] });
       setSuccess(true);
       console.info("contract call successs", data);
     } catch (err) {
