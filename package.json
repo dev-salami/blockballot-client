@@ -12,6 +12,7 @@
   "dependencies": {
     "@thirdweb-dev/react": "^4.1.10",
     "@thirdweb-dev/sdk": "^4.0.17",
+    "chart.js": "^4.4.1",
     "ethers": "^5.7.2",
     "framer-motion": "^10.16.5",
     "next": "14.0.2",
