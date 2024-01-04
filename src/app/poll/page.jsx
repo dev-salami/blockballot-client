@@ -1,20 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import empty from "../../../public/empty.webp";
+import React from "react";
 
-import {
-  useAddress,
-  useContract,
-  useContractRead,
-  useContractWrite,
-} from "@thirdweb-dev/react";
-import Navbar from "@/components/Navbar";
+import { useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 import Link from "next/link";
 import Loader from "@/components/Loader";
 import EndPollButton from "@/components/Button/EndPollButton";
 import DeletePollButton from "@/components/Button/DeletePollButton";
 import { motion } from "framer-motion";
-import Image from "next/image";
 function Polls() {
   const address = useAddress();
   const { contract } = useContract(
@@ -29,7 +21,6 @@ function Polls() {
 
   return (
     <>
-      <Navbar />
       <section className="container mx-auto px-6">
         {loadingUserPoll ? (
           <Loader />

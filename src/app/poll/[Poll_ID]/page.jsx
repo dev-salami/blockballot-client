@@ -18,33 +18,32 @@ export default function Page({ params }) {
   // }
   return (
     <>
-      <Navbar />
       <section className="container mx-auto px-6 mt-6">
         {isLoading ? (
           <Loader />
         ) : (
           <>
             {error ? (
-              <div className="text-center text-red-500 text-4xl font-semibold">
+              <div className="text-center text-red-500 text-4xl font-semibold p-4">
                 {error.reason}
               </div>
             ) : (
-              <main>
+              <main className="border max-w-2xl rounded-xl mx-auto p-4">
                 <div>
-                  <span>ID</span> <span> : </span>
+                  <span>POLL ID</span> <span> : </span>
                   <span> {poll[6]}</span>
                 </div>
                 <div>
                   <span>PUBLIC ACCESS</span>
                   <span> : </span>
 
-                  <span>{poll?.[1].toString()}</span>
+                  <span className="uppercase">{poll?.[1].toString()}</span>
                 </div>
                 <div>
                   <span>POLL ENDED</span>
                   <span> : </span>
 
-                  <span>{poll?.[0].toString()}</span>
+                  <span className="uppercase">{poll?.[0].toString()}</span>
                 </div>
                 <div>
                   <span>CREATOR</span>
@@ -62,7 +61,8 @@ export default function Page({ params }) {
                 <div>
                   {poll[4].map((option, index) => (
                     <div key={index}>
-                      {option} {poll[5][index].toNumber()}
+                      OPTION {index + 1} — {option} —{" "}
+                      {poll[5][index].toNumber()} Votes
                     </div>
                   ))}
                 </div>
