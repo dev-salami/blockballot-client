@@ -5,7 +5,7 @@ import React from "react";
 
 function Header() {
   return (
-    <section className="my-8 container px-4">
+    <section className="my-8 mx-auto container px-4">
       <div className="text-center leading-[5px] md:leading-3">
         <motion.div
           transition={{ duration: 0.4, delay: 0 }}
