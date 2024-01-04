@@ -1,15 +1,12 @@
 "use client";
 import React, { useState } from "react";
 
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import Loader from "@/components/LoaderSm";
 function ManagePolls() {
   const [poll_ID, setPoll_ID] = useState(2);
 
   return (
     <>
-      <Navbar />
       <div className="absolute left-1/2 top-1/2 -translate-y-1/2  inset-0 mx-auto h-fit -translate-x-1/2">
         <div className="max-w-lg flex gap-4 flex-col p-6 rounded-xl bg-gray-900 border">
           <div className="flex flex-col gap-1">
