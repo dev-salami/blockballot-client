@@ -51,11 +51,11 @@ function Navbar() {
   ];
   return (
     <div>
-      <div className="container text-xs sm:text-base mx-auto px-4 py-3 mt-4 bg-white/10 flex justify-between rounded-xl ">
-        <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-md  text-sm font-semibold">
+      <div className="max-w-7xl text-xs sm:text-base mx-4 p-3 mt-4 bg-white/10 flex justify-between rounded-xl ">
+        <div className="bg-gray-900 block md:hidden px-4 py-1 rounded-md  text-sm font-semibold">
           BLOCK BALLOT
         </div>
-        <div className="hidden sm:flex justify-between w-full  items-center">
+        <div className="hidden md:flex justify-between w-full  items-center">
           <div className="bg-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
             BLOCK BALLOT
           </div>
@@ -75,16 +75,14 @@ function Navbar() {
           </Link>
           <ConnectWallet className="!text-xs !w-fit" />
         </div>
-        {/* <div className="bg-black block sm:hidden px-4 py-1 rounded-full">
-          Login
-        </div> */}
+
         <button onClick={() => setOpen((prev) => !prev)}>
           {Open ? (
-            <div className="bg-black block sm:hidden px-4 py-1 rounded-full">
+            <div className="bg-black block md:hidden px-4 py-1 rounded-full">
               CLOSE
             </div>
           ) : (
-            <div className="bg-black block sm:hidden px-4 py-1 rounded-full">
+            <div className="bg-black block md:hidden px-4 py-1 rounded-full">
               MENU
             </div>
           )}
@@ -97,9 +95,6 @@ function Navbar() {
             initial="initial"
             animate="animate"
             exit="exit"
-            // className={`${
-            //   Open ? " translate-y-0" : "-translate-y-[120%]"
-            // }  duration-500 fixed inset-0 z-50 bg-black w-full text-center gap-6 justify-center  flex sm:hidden flex-col`}
             className=" fixed origin-top inset-0 z-50 bg-black w-full text-center gap-6 justify-center  flex sm:hidden flex-col text-2xl"
           >
             <div>
