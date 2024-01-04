@@ -14,22 +14,118 @@ function Company() {
     <div className="slider-container">
       <div className="slider ">
         <div className="slide-track">
-          <Image className="slide" height={200} width={200} src={logo1}></Image>
-          <Image className="slide" height={200} width={200} src={logo2}></Image>
-          <Image className="slide" height={200} width={200} src={logo3}></Image>
-          <Image className="slide" height={200} width={200} src={logo4}></Image>
-          <Image className="slide" height={200} width={200} src={logo5}></Image>
-          <Image className="slide" height={200} width={200} src={logo6}></Image>
-          <Image className="slide" height={200} width={200} src={logo7}></Image>
-          <Image className="slide" height={200} width={200} src={logo8}></Image>
-          <Image className="slide" height={200} width={200} src={logo1}></Image>
-          <Image className="slide" height={200} width={200} src={logo2}></Image>
-          <Image className="slide" height={200} width={200} src={logo3}></Image>
-          <Image className="slide" height={200} width={200} src={logo4}></Image>
-          <Image className="slide" height={200} width={200} src={logo5}></Image>
-          <Image className="slide" height={200} width={200} src={logo6}></Image>
-          <Image className="slide" height={200} width={200} src={logo7}></Image>
-          <Image className="slide" height={200} width={200} src={logo8}></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo1}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo2}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo3}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo4}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo5}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo6}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo7}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo8}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo1}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo2}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo3}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo4}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo5}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo6}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo7}
+          ></Image>
+          <Image
+            alt="company-logo"
+            className="slide"
+            height={200}
+            width={200}
+            src={logo8}
+          ></Image>
         </div>
       </div>
     </div>
