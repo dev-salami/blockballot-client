@@ -1,6 +1,5 @@
 "use client";
 import Loader from "@/components/Loader";
-import Navbar from "@/components/Navbar";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
 
 export default function Page({ params }) {
@@ -13,9 +12,6 @@ export default function Page({ params }) {
     error,
   } = useContractRead(contract, "getSinglePoll", [params.Poll_ID]);
 
-  // if(!isLoading && error ) {
-
-  // }
   return (
     <>
       <section className="container mx-auto px-6 mt-6">

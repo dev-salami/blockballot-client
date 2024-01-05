@@ -7,7 +7,6 @@ import {
   useContractRead,
   useContractWrite,
 } from "@thirdweb-dev/react";
-import Navbar from "@/components/Navbar";
 import Loader from "@/components/LoaderSm";
 import VoteSuccess from "@/components/VoteSuccess";
 function Vote({ params }) {
@@ -61,7 +60,9 @@ function Vote({ params }) {
 
   return (
     <>
-      {isLoadingPoll ? (
+      {isLoadingPoll &&
+      isLoadingCanParticipate &&
+      isLoadingAlreadyParticipated ? (
         <Loader />
       ) : (
         <section>
@@ -108,7 +109,7 @@ function Vote({ params }) {
                   </button>
                 ))}
               </div>
-              {canParticipate.toString() === "false" && (
+              {canParticipate?.toString() === "false" && (
                 <p className="text-red-500 uppercase border rounded-md mt-4 text-sm font-bold p-2">
                   You can not participate in this poll
                 </p>
@@ -121,7 +122,7 @@ function Vote({ params }) {
                   right to vote or contact the poll admin
                 </div>
               )}
-              {alreadyParticipated.toString() === "true" && (
+              {alreadyParticipated?.toString() === "true" && (
                 <div className="text-red-500 uppercase border rounded-md mt-4 text-sm font-bold p-2">
                   You have already participated in this poll. Thank you
                 </div>
