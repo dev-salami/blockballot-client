@@ -7,6 +7,7 @@ import Loader from "@/components/Loader";
 import EndPollButton from "@/components/Button/EndPollButton";
 import DeletePollButton from "@/components/Button/DeletePollButton";
 import { motion } from "framer-motion";
+import { FaEdit } from "react-icons/fa";
 function Polls() {
   const address = useAddress();
   const { contract } = useContract(
@@ -72,11 +73,15 @@ function Polls() {
                     initial={{ opacity: 0, translateY: +60 }}
                     animate={{ opacity: 1, translate: 0 }}
                     key={index}
-                    className="border p-2  rounded-md flex justify-between"
+                    className="border p-2  rounded-md flex md:flex-row flex-col justify-center text-center md:justify-between gap-2"
                   >
                     <span>{`ID : ${poll}`}</span>
+                    <hr className="md:hidden" />
                     <Link href={`poll/${poll}`}>View Poll</Link>
+                    <hr className="md:hidden" />
                     <DeletePollButton Poll_ID={poll} index={index} />
+                    <hr className="md:hidden" />
+                    {/* <EditPollButton Poll_ID={poll} index={index} /> */}
                     <EndPollButton Poll_ID={poll} />
                   </motion.div>
                 ))}

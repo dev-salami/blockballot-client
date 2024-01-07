@@ -37,7 +37,10 @@ function DeletePollButton({ Poll_ID, index }) {
           />
         </div>
       ) : (
-        <button onClick={_deletePoll}>
+        <button
+          className="flex justify-center w-full md:w-fit"
+          onClick={_deletePoll}
+        >
           <MdDelete />
         </button>
       )}
