@@ -53,11 +53,11 @@ function Navbar() {
     <div>
       <div className="max-w-7xl text-xs sm:text-base mx-4 p-3 mt-4 bg-white/10 flex justify-between rounded-xl ">
         <div className="bg-gray-900 block md:hidden px-4 py-1 rounded-md  text-sm font-semibold">
-          BLOCK BALLOT
+          DECI-POLL
         </div>
         <div className="hidden md:flex justify-between w-full  items-center">
           <div className="bg-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
-            BLOCK BALLOT
+            DECI-POLL
           </div>
 
           <Link href="/" className="bg-black px-4 py-1 rounded-full">
@@ -100,7 +100,7 @@ function Navbar() {
             <div>
               <div className="top-4 justify-between px-4 w-full absolute flex">
                 <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-full">
-                  LOGO
+                  DECI-POLL
                 </div>
                 <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-full">
                   Login
