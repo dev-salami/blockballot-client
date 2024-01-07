@@ -1,28 +1,29 @@
 // components/BarChart.js
 "use client";
-import { Chart } from "chart.js";
+// import { Chart } from "chart.js";
 import React, { useEffect } from "react";
-// import Chart from "chart.js/auto";
+import Chart from "chart.js/auto";
 
 function BarChart({ dtata }) {
   const chartRef = React.createRef();
   const data = {
-    labels: ["Poor", "Fair", "Good", "V.Good", "Excellent"],
+    labels: ["Kenny", "Taiye"],
     datasets: [
       {
-        label: ["Poor", "Fair", "Good", "V.Good", "Excellent"],
-        data: [6, 8, 9, 3, 2],
-        backgroundColor: ["red", "#003366", "blue", "cyan", "green"],
-        borderColor: "rgba(75, 192, 192, 1)",
+        label: "My First Dataset",
+        data: [65, 59, 80, 81, 56, 55, 40],
+        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)"],
+        borderColor: ["rgb(255, 99, 132)", "rgb(255, 159, 64)"],
         borderWidth: 1,
       },
     ],
   };
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
 
     new Chart(ctx, {
-      type: "bar",
+      type: "doughnut",
       data: data,
       options: {
         plugins: {
@@ -42,7 +43,7 @@ function BarChart({ dtata }) {
     });
   }, [data]);
 
-  return <canvas ref={chartRef} />;
+  return <canvas id="45" ref={chartRef} />;
 }
 
 export default BarChart;
