@@ -24,41 +24,47 @@ export default function Page({ params }) {
                 {error.reason}
               </div>
             ) : (
-              <main className="border max-w-2xl rounded-xl mx-auto p-4">
-                <div>
-                  <span>POLL ID</span> <span> : </span>
-                  <span> {poll[6]}</span>
-                </div>
-                <div>
-                  <span>PUBLIC ACCESS</span>
-                  <span> : </span>
+              <main className="border max-w-2xl rounded-xl mx-auto ">
+                <div className="p-4">
+                  <div>
+                    <span>POLL ID</span> <span> : </span>
+                    <span> {poll[6]}</span>
+                  </div>
+                  <div>
+                    <span>PUBLIC ACCESS</span>
+                    <span> : </span>
 
-                  <span className="uppercase">{poll?.[1].toString()}</span>
-                </div>
-                <div>
-                  <span>POLL ENDED</span>
-                  <span> : </span>
+                    <span className="uppercase">{poll?.[1].toString()}</span>
+                  </div>
+                  <div>
+                    <span>POLL ENDED</span>
+                    <span> : </span>
 
-                  <span className="uppercase">{poll?.[0].toString()}</span>
-                </div>
-                <div>
-                  <span>CREATOR</span>
-                  <span> : </span>
+                    <span className="uppercase">{poll?.[0].toString()}</span>
+                  </div>
+                  <div>
+                    <span>CREATOR</span>
+                    <span> : </span>
 
-                  <span>{poll?.[2].toString()}</span>
-                </div>
-                <div>
-                  <span>QUESTION</span>
-                  <span> : </span>
+                    <span>{poll?.[2].toString()}</span>
+                  </div>
+                  <div>
+                    <span>QUESTION</span>
+                    <span> : </span>
 
-                  <span>{poll?.[3]}</span>
+                    <span>{poll?.[3]}</span>
+                  </div>
                 </div>
-
                 <div>
                   {poll[4].map((option, index) => (
-                    <div key={index}>
-                      OPTION {index + 1} — {option} —{" "}
-                      {poll[5][index].toNumber()} Votes
+                    <div className="flex flex-col gap-3 justify-center">
+                      <div
+                        className="border-t py-2 px-4 flex justify-between"
+                        key={index}
+                      >
+                        <span>{option}</span>
+                        <span>{poll[5][index].toNumber()} Votes</span>
+                      </div>
                     </div>
                   ))}
                 </div>
