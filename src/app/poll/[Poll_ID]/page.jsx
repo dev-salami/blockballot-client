@@ -57,11 +57,11 @@ export default function Page({ params }) {
                 </div>
                 <div>
                   {poll[4].map((option, index) => (
-                    <div className="flex flex-col gap-3 justify-center">
-                      <div
-                        className="border-t py-2 px-4 flex justify-between"
-                        key={index}
-                      >
+                    <div
+                      key={index}
+                      className="flex flex-col gap-3 justify-center"
+                    >
+                      <div className="border-t py-2 px-4 flex justify-between">
                         <span>{option}</span>
                         <span>{poll[5][index].toNumber()} Votes</span>
                       </div>
@@ -75,28 +75,4 @@ export default function Page({ params }) {
       </section>
     </>
   );
-}
-
-{
-  /* Creator
-: 
-"0x8816Fa30064cEf7E532E6597C0F4B0adAACF0401"
-Id
-: 
-BigNumber {_hex: '0x01', _isBigNumber: true}
-ended
-: 
-false
-options
-: 
-(3) ['Royal Prince', 'Plato', 'Faji']
-public__access
-: 
-true
-question
-: 
-"\"Select your President\""
-whiteList
-: 
-[] */
 }
