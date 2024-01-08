@@ -29,11 +29,6 @@ function Polls() {
           <div className="">
             {data.length === 0 ? (
               <div className="my-8 flex flex-col justify-center items-center h-full ">
-                {/* <Image
-                  className="w-auto  h-40 m-6"
-                  src={empty}
-                  alt="big-idea"
-                ></Image> */}
                 <motion.div
                   transition={{ duration: 1 }}
                   initial={{ opacity: 0 }}
