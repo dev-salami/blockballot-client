@@ -28,15 +28,12 @@ function Vote({ params }) {
     try {
       const data = await usePoll({ args: [params.Poll_ID, index] });
       setSuccess(true);
-      console.info("contract call successs", data);
     } catch (err) {
-      console.error("contract call failure", err);
       setError(err.reason);
       setTimeout(() => {
         setError("");
         setOptionIndex(null);
       }, 4000);
-      console.log(err.reason);
     }
   };
 

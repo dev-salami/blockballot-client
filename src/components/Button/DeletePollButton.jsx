@@ -20,7 +20,6 @@ function DeletePollButton({ Poll_ID, index }) {
     try {
       const data = await deletePoll({ args: [Poll_ID, index] });
       setSuccess(true);
-      console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);
     }

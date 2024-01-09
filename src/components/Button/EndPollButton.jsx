@@ -19,7 +19,6 @@ function EndPollButton({ Poll_ID }) {
     try {
       const data = await endPoll({ args: [Poll_ID] });
       setSuccess(true);
-      console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);
     }

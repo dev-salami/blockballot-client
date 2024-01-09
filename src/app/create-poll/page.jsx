@@ -90,7 +90,6 @@ function Page() {
                 : false
             }
           />
-          <button onClick={() => console.log(args)}>TEST</button>
         </div>
       </div>
     </>
