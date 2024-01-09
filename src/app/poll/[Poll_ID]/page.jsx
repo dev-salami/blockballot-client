@@ -48,14 +48,10 @@ export default function Page({ params }) {
 
                     <span>{poll?.[2].toString()}</span>
                   </div>
-                  <div>
-                    <span>QUESTION</span>
-                    <span> : </span>
-
-                    <span>{poll?.[3]}</span>
-                  </div>
                 </div>
                 <div>
+                  <hr />
+                  <div className="px-4 py-2 text-center">{poll?.[3]}</div>
                   {poll[4].map((option, index) => (
                     <div
                       key={index}
