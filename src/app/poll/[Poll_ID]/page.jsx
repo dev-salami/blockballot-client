@@ -1,6 +1,8 @@
 "use client";
+import AddMoreAddressToWhiteList from "@/components/AddMoreAddressToWhiteList";
 import Loader from "@/components/Loader";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
+import { useState } from "react";
 
 export default function Page({ params }) {
   const { contract } = useContract(
@@ -11,6 +13,9 @@ export default function Page({ params }) {
     isLoading,
     error,
   } = useContractRead(contract, "getSinglePoll", [params.Poll_ID]);
+
+  const [showInput, setShowInput] = useState(false);
+  const [whiteList, setWhiteList] = useState([""]);
 
   return (
     <>
@@ -48,8 +53,26 @@ export default function Page({ params }) {
 
                     <span>{poll?.[2].toString()}</span>
                   </div>
+                  <div>
+                    {poll?.[1].toString() !== "false" && (
+                      <button className="uppercase text-sm">
+                        Add more addresses to whiteList
+                      </button>
+                    )}
+                  </div>
                 </div>
                 <div>
+                  <hr />
+                  <div>
+                    {poll?.[1].toString() !== "false" && (
+                      <button
+                        onClick={() => setShowInput(true)}
+                        className="uppercase text-sm px-4 py-2 bg-gray-900 w-full"
+                      >
+                        Add more addresses to whiteList
+                      </button>
+                    )}
+                  </div>
                   <hr />
                   <div className="px-4 py-2 text-center">{poll?.[3]}</div>
                   {poll[4].map((option, index) => (
@@ -67,6 +90,14 @@ export default function Page({ params }) {
               </main>
             )}
           </>
+        )}
+
+        {showInput && (
+          <AddMoreAddressToWhiteList
+            setShowInout={setShowInput}
+            setAddress={setWhiteList}
+            address={whiteList}
+          />
         )}
       </section>
     </>
