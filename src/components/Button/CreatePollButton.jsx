@@ -32,7 +32,7 @@ function CreatePollButton({ args, isInputValid }) {
         <Loader />
       ) : (
         <button
-          disabled={isInputValid}
+          disabled={!isInputValid || isLoading}
           className="mt-4 bg-black disabled:bg-black/80 text-white w-full font-semibold py-1 px-3 rounded-md"
           onClick={_CreatePoll}
         >
