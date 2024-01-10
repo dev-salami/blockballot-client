@@ -53,8 +53,6 @@ function Vote({ params }) {
       from: address,
     });
 
-  console.log(canParticipate, alreadyParticipated);
-
   return (
     <>
       {isLoadingPoll &&
