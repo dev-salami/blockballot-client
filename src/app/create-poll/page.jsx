@@ -86,8 +86,8 @@ function Page() {
               !question ||
               !option ||
               public__access === null
-                ? true
-                : false
+                ? false
+                : true
             }
           />
         </div>
