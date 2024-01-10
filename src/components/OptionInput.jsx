@@ -26,15 +26,16 @@ const DynamicOption = ({ setOption, option }) => {
         Poll Options
       </label>
       <div>
-        {option.map((field, index) => (
+        {option.map((data, index) => (
           <div key={index} className="flex gap-4 items-center mb-2">
             <input
               type="text"
               className="border border-black rounded-md py-1 px-2 text-gray-900 w-full"
               placeholder="Enter Option"
-              value={field.value}
+              value={data}
               onChange={(e) => handleOptionChange(index, e)}
             />
+
             <button
               type="button"
               className="px-4 py-2 bg-black text-white rounded"
