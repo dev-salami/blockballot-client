@@ -64,7 +64,7 @@ export default function Page({ params }) {
                 <div>
                   <hr />
                   <div>
-                    {poll?.[1].toString() !== "false" && (
+                    {poll?.[1].toString() === "false" && (
                       <button
                         onClick={() => setShowInput(true)}
                         className="uppercase text-sm px-4 py-2 bg-gray-900 w-full"
@@ -94,9 +94,10 @@ export default function Page({ params }) {
 
         {showInput && (
           <AddMoreAddressToWhiteList
-            setShowInout={setShowInput}
+            setShowInput={setShowInput}
             setAddress={setWhiteList}
             address={whiteList}
+            Id={params.Poll_ID}
           />
         )}
       </section>
