@@ -11,6 +11,7 @@ function Page() {
   const [option, setOption] = useState([""]);
   const [public__access, setPublic__access] = useState(null);
   const [whiteList, setWhiteList] = useState([""]);
+
   const args = [uuid(), public__access, whiteList, question, option];
 
   function hasEmptyString(arr) {
@@ -38,7 +39,7 @@ function Page() {
             />
           </div>
           <OptionInput setOption={setOption} option={option} />
-          {public__access === "false" && (
+          {!public__access && (
             <WhiteList
               access={public__access}
               setAddress={setWhiteList}
@@ -51,13 +52,13 @@ function Page() {
             <div className="border border-black rounded-md py-1 px-2 ">
               <input
                 onChange={(e) => {
-                  setPublic__access(e.target.value);
+                  setPublic__access(true);
                   setWhiteList([]);
                 }}
                 type="radio"
                 id="true"
                 name="public__access"
-                value="true"
+                value={true}
                 className="mr-2"
               />
               <label htmlFor="true" className="mr-4">
@@ -65,13 +66,13 @@ function Page() {
               </label>
               <input
                 onChange={(e) => {
-                  setPublic__access(e.target.value);
+                  setPublic__access(false);
                   setWhiteList([""]);
                 }}
                 type="radio"
                 id="false"
                 name="public__access"
-                value="false"
+                value={false}
                 className="mr-2"
               />
               <label htmlFor="false">FALSE</label>
