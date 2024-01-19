@@ -3,6 +3,7 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
+import { FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [Open, setOpen] = useState(false);
@@ -45,9 +46,9 @@ function Navbar() {
 
   const linkArray = [
     { href: "/", title: "Home" },
-    { href: "/poll-settings", title: "manage Polls" },
+    { href: "/vote", title: "Vote" },
     { href: "/create-poll", title: "Create Poll" },
-    { href: "/login", title: "Login" },
+    { href: "/poll", title: "manage Poll" },
   ];
   return (
     <div>
@@ -76,16 +77,11 @@ function Navbar() {
           <ConnectWallet className="!text-xs !w-fit" />
         </div>
 
-        <button onClick={() => setOpen((prev) => !prev)}>
-          {Open ? (
-            <div className="bg-black block md:hidden px-4 py-1 rounded-full">
-              CLOSE
-            </div>
-          ) : (
-            <div className="bg-black block md:hidden px-4 py-1 rounded-full">
-              MENU
-            </div>
-          )}
+        <button
+          className="bg-black block md:hidden px-4 py-1 rounded-full"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          MENU
         </button>
       </div>
       <AnimatePresence>
@@ -95,43 +91,33 @@ function Navbar() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className=" fixed origin-top inset-0 z-50 bg-black w-full text-center gap-6 justify-center  flex sm:hidden flex-col text-2xl"
+            className=" fixed origin-top inset-0 z-50 bg-black w-full text-center gap-6 justify-center  flex sm:hidden flex-col "
           >
             <div>
-              <div className="top-4 justify-between px-4 w-full absolute flex">
-                <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-full">
+              <div className="top-4 justify-between px-4 w-full absolute flex items-center">
+                <p className="bg-gray-900 block sm:hidden px-4 py-1 rounded-md">
                   DECI-POLL
-                </div>
-                <div className="bg-gray-900 block sm:hidden px-4 py-1 rounded-full">
-                  Login
-                </div>
-                <div
+                </p>
+
+                <button
                   onClick={() => setOpen(false)}
-                  className="bg-gray-900 block sm:hidden px-4 py-1 rounded-full"
+                  className="bg-gray-900 block sm:hidden p-2 rounded-full"
                 >
-                  Cancel
-                </div>
+                  <FaTimes size={25} />
+                </button>
               </div>
-              {linkArray.map((link, index) => (
-                <div className="overflow-hidden" key={index}>
-                  <MobileLink href={link.href} title={link.title} />
-                </div>
-              ))}
-              <ConnectWallet className="!text-xs !w-fit" />
-              {/* <motion.div
-                variants={linkVars}
-                initial="initial"
-                animate="Open"
-                className=" px-4 py-1 l"
-              >
-                Home
-              </motion.div>
-              <div className="bg-black px-4 py-1 rounded-full">Create Poll</div>
-              <div className="bg-black px-4 py-1 rounded-full">View Polls</div>
-              <div className="bg-black px-4 py-1 rounded-full">
-                Manage Polls
+              <div className="flex flex-col gap-4">
+                {linkArray.map((link, index) => (
+                  <div
+                    onClick={() => setOpen(false)}
+                    className="overflow-hidden"
+                    key={index}
+                  >
+                    <MobileLink href={link.href} title={link.title} />
+                  </div>
+                ))}
+                <ConnectWallet className="!bg-transparent !text-white !uppercase !w-fit !mx-auto" />
               </div>
-              <div className=" px-4 py-1 ">Login</div> */}
             </div>
           </motion.div>
         )}
@@ -159,20 +145,13 @@ const MobileLink = ({ title, href }) => {
         delay: 0.2,
       },
     },
-    // exit: {
-    //   y: "30vh",
-    //   transition: {
-    //     duration: 0.5,
-    //     delay: 0.5,
-    //   },
-    // },
   };
   return (
     <motion.div
       variants={linkVars}
       initial="initial"
       animate="Open"
-      className=" px-4 py-1 l"
+      className=" px-4 py-1 uppercase"
     >
       <Link href={href}>{title}</Link>
     </motion.div>
