@@ -3,20 +3,20 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 function ManagePolls() {
-  const [poll_ID, setPoll_ID] = useState(2);
+  const [poll_ID, setPoll_ID] = useState();
 
   return (
     <>
-      <div className="absolute left-1/2 top-1/2 -translate-y-1/2  inset-0 mx-auto h-fit -translate-x-1/2">
-        <div className="max-w-lg flex gap-4 flex-col p-6 rounded-xl bg-gray-900 border">
-          <div className="flex flex-col gap-1">
-            <label className="pl-2 font-semibold" htmlFor="title">
+      <div className="flex justify-center items-center my-auto">
+        <div className="max-w-lg flex items-center justify-center w-full  mx-4 mt-20 gap-4 flex-col p-2 rounded-xl  border">
+          <div className="flex flex-col gap-1 w-full">
+            {/* <label className="pl-2 font-semibold" htmlFor="title">
               Poll ID
-            </label>
+            </label> */}
             <input
               onChange={(e) => setPoll_ID(e.target.value)}
               value={poll_ID}
-              className="border border-black rounded-md py-1 px-2 text-gray-900"
+              className="border  border-black rounded-md py-1 px-2 text-gray-900"
               type="text"
               placeholder="Enter Poll ID"
             />
